@@ -1,3 +1,5 @@
-theme: jekyll-theme-minimal
+theme: pages-themes/minimal@v0.2.0
+plugins: # a list of plugins
+- jekyll-remote-theme
 title: pdoriadev - Game Designer and Developer
 description: Resume and Portfolio. Bookmark this page!
