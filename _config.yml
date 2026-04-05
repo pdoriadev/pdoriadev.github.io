@@ -1,4 +1,4 @@
-theme: pages-themes/minimal@v0.2.0
+theme: minima
 plugins: # a list of plugins
 - jekyll-remote-theme
 title: pdoriadev - Game Designer and Developer
