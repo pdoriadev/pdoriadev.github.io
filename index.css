@@ -1,11 +1,37 @@
 body
 {
   font-family:sans-serif;
-  color:rgb(230, 166, 46);
+  color:rgb(81, 0, 0);
+  background-color: rgb(227, 194, 172);
 }
 
 li
 {
   font-family:sans-serif;
-  color:rgba(35, 3, 69, 0.415);
+  color:rgb(81, 0, 0);
+}
+
+a:link
+{
+  font-weight: lighter;
+}
+
+a:visited
+{
+  color:rgb(99, 142, 186)
+}
+
+a:focus
+{
+  color:dodgerblue
+}
+
+a:hover
+{
+  color:rgb(156, 208, 244)
+}
+
+a:active
+{
+  color:rgb(61, 158, 255)
 }
