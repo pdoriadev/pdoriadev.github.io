@@ -9,12 +9,13 @@
     <meta http-equiv='pragma' content='no-cache'>
     <!-- Prevents mobile browsers from rendering pages wider than the viewport and then shrinking them down. -->
     <meta name="viewport" content="width=device-width", initial-scale=1.0" />
-    <link href="index.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
     <title>Peter Doria - Game Designer, Programmer</title>
 </head>
 <body>
 	<header class="site_header">
 		<div class="wrapper_inner">
+			<!-- NavBar - Jump to sections. Uses flex classes. --!>
 			<nav class="site_header_nav">
 				<ul role="list" class="flex flex_center">
 					<li><a heref="#0">HOME</a></li>
@@ -49,6 +50,27 @@
 			<ul>
 		</section>
 	</main>
+	<section id="about">
+		<div class="wrapper">
+			<div class="text_center">
+				<h2>
+					I am who I am.
+				</h2>
+			</div>
+			<div class="wrapper_inner">
+				<div class="about_content flex flex_around">
+					<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/figure -->		
+					<figure class="about_figure text_center">
+						<img width="200px" height="200px" src="" alt="Developer" class="about_img" />
+						<figcaption class="about_capution"> Peter </figcaption>
+					</figure>
+					<p class="h5">
+						Designing games. Building systems.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>		
 
     <!-- Top Page Paragraph -->
 	<!--

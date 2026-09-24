@@ -186,4 +186,49 @@ h5,
   margin: 0 auto;
 }
 
+/*HEADER STYLING*/
 
+/* Adds padding and a dark gradient to background.*/
+.site_header {
+  padding: var(--space-s) 0;
+  background: linear-gradient(rgba(26, 26, 64, 0.9), rgba(26, 26, 64, 0.9));
+}
+
+/*Removes link underlines. Makes text white*/
+.site_header_nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/*HERO STYLING*/
+
+/* adds padding */
+.hero_content {
+  padding: var(--space-3xl) 0;
+}
+
+.hero_content h1 {
+  margin-bottom: var(--space-s);
+}
+
+/* adds padding above social */
+.hero_social {
+  padding-top: var(--space-3xl);
+}
+
+/* General styling for the hero section */
+section {
+  padding: var(--space-2xl) var(--space-l);
+}
+
+/*gradient background*/
+section#hero {
+  background: linear-gradient(rgba(26, 26, 64, 0.9), rgba(26, 26, 64, 0.9)),
+    url("LeavesFromTheVine.jpg");
+  padding-bottom: 4px;
+  background-size: cover;
+  background-position: top;
+  background-attachment: scroll;
+  color: #fafafa;
+  --color-accent: #8a2be2;
+}
