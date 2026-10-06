@@ -25,14 +25,18 @@ blockquote,
 dl,
 dd {
   margin: 0;
+  padding: 0;
+  list-style-type: none
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
+/*ul[role="list"],
 ol[role="list"] {
   list-style: none;
-  padding: 0;
+  padding: 0
 }
+This is probably fine to have. It was annoying to finally find out what was causing strange behavior in list items. Might do something like it later." 
+ */
 
 /* Set core root defaults */
 html:focus-within {
@@ -232,7 +236,7 @@ h5,
 
 /* define spacing */
 .padding-top-3xs {
-  padding: var(--space-3xs);
+  padding-top: var(--space-3xs);
 }
 
 /*#wrapper*/
@@ -297,7 +301,7 @@ section#hero {
   max-width: 10em;
   min-height: 1em;
   max-height: 10em;
-  justify-content: left;
+  justify-content: start;
 }
 
 .hero_content {
@@ -313,37 +317,19 @@ section#hero {
   margin-bottom: var(--space-s);
 }
 
-.hero_social {
-  flex: none;
+.hero_socials {
+  list-style-type: none; 
   display: inline-flex;
-  justify-content: flex-start; 
-  margin-top: 0.5em;
-}
-
-.hero_social li {
-  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+  gap: 0.5rem;
 }
 
 .hero_about {
   padding-left: 1em;
-  padding-right: 1em;
+  padding-right: 1em; 
   min-width: 30rem;
   max-width: 60rem;
 }
-
-/*#about Stylings*/
-/*
-
-section#about {
-  padding-top: 50px;
-  color: black;
-}
-
-.about_title {
-  padding-bottom: 50px;
-}
-
-*/
 
 /*#paidWork Stylings*/
 /* PLAN
