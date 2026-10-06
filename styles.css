@@ -18,6 +18,8 @@ h2,
 h3,
 h4,
 p,
+ul,
+li,
 figure,
 blockquote,
 dl,
@@ -53,7 +55,7 @@ a:not([class]) {
 img,
 picture {
   max-width: 100%;
-  display: block;
+  display: flex;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -131,27 +133,38 @@ h5,
   font-size: var(--step-1);
 }
 
+.h0 {
+  font-size: var(--step-0);
+}
+
 /* define constants for layout and spacing */
 .flex {
   display: flex;
   align-items: center;
   gap: var(--space-s);
 }
-@media (max-width: 468px) {
+
+/*#@media platform settings*/
+
+@media screen and (max-width: 468px) {
   .flex {
     flex-wrap: wrap;
   }
 }
+
 .flex_center {
   justify-content: center;
 }
+
 .flex_around {
   justify-content: space-around;
 }
+
 .flex_between {
   justify-content: space-between;
 }
-@media (max-width: 468px) {
+
+@media screen and (max-width: 468px) {
   .flex_around {
     justify-content: center;
   }
@@ -159,9 +172,60 @@ h5,
     justify-content: center;
   }
 }
+
+/*desktop/laptop screen settings*/
+@media screen and (min-width: 1200px) {
+  /*Test so I know desktop settings are working.*/ 
+  body {
+    background-color: powderblue;
+  }
+  .wrapper {
+		min-width: 1200px;
+		max-width: 1200px;
+  }
+  .wrapper_inner {
+		min-width: 1000px;
+		max-width: 1000px;
+  }
+}
+
+/*desktop/laptop screen settings*/
+@media screen and (min-width: 1600px) {
+  /*Test so I know desktop settings are working.*/ 
+  body {
+    background-color: lightblue;
+  }
+  .wrapper {
+		min-width: 1600px;
+		max-width: 1600px;
+  }
+  .wrapper_inner {
+		min-width: 1400px;
+		max-width: 1400px;
+  }
+}
+
+
+/*desktop/laptop screen settings*/
+@media screen and (min-width: 2100px) {
+  /*Test so I know desktop settings are working.*/ 
+  body {
+    background-color: cyan;
+  }
+  .wrapper {
+		min-width: 2100px;
+		max-width: 2100px;
+  }
+  .wrapper_inner {
+		min-width: 1900px;
+		max-width: 1900px;
+  }
+}
+
 .text_center {
   text-align: center;
 }
+
 .text_right {
   text-align: right;
 }
@@ -171,22 +235,23 @@ h5,
   padding: var(--space-3xs);
 }
 
-/* create the wrappers.*/
+/*#wrapper*/
 
 /* ensures content doesn't get too wide. */
 .wrapper { 
   width: 100%;
-  max-width: 1240px;
-  margin: 0 auto;
-}
-/* more control for inner sectinos */
-.wrapper_inner {
-  width: 100%;
-  max-width: 800px;
+  max-width: auto;
   margin: 0 auto;
 }
 
-/*HEADER STYLING*/
+/* more control for inner sectinos */
+.wrapper_inner {
+  width: 100%;
+  max-width: auto;
+  margin: 0 auto;
+}
+
+/*#header STYLING*/
 
 /* Adds padding and a dark gradient to background.*/
 .site_header {
@@ -200,35 +265,111 @@ h5,
   color: #fff;
 }
 
-/*HERO STYLING*/
-
-/* adds padding */
-.hero_content {
-  padding: var(--space-3xl) 0;
-}
-
-.hero_content h1 {
-  margin-bottom: var(--space-s);
-}
-
-/* adds padding above social */
-.hero_social {
-  padding-top: var(--space-3xl);
-}
-
-/* General styling for the hero section */
-section {
-  padding: var(--space-2xl) var(--space-l);
-}
+/*#hero STYLING*/
 
 /*gradient background*/
 section#hero {
-  background: linear-gradient(rgba(26, 26, 64, 0.9), rgba(26, 26, 64, 0.9)),
-    url("LeavesFromTheVine.jpg");
+  background: linear-gradient(rgba(26, 26, 64, 0.9), rgba(52, 52, 128, 0.8));
   padding-bottom: 4px;
-  background-size: cover;
+  background-size: cover; /*the gradient completely covers the hero section container. https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/background-size*/
   background-position: top;
   background-attachment: scroll;
   color: #fafafa;
   --color-accent: #8a2be2;
 }
+
+/* General styling for the hero section */
+section#hero {
+  padding: var(--space-xs) var(--space-xs); 
+}
+
+.hero_container { 
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.hero_figure {
+  /*display: inline-flex;*/
+  flex-shrink: 0;  /*can't shrink.*/
+  /*align-self: center;*/
+  min-width: 1em;
+  max-width: 10em;
+  min-height: 1em;
+  max-height: 10em;
+  justify-content: left;
+}
+
+.hero_content {
+  flex-direction: column; 
+  padding: var(--space-s) 0;
+  padding-left: var(--space-s);
+  flex-shrink: 0;
+}
+
+.hero_content h1 {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: var(--space-s);
+}
+
+.hero_social {
+  flex: none;
+  display: inline-flex;
+  justify-content: flex-start; 
+  margin-top: 0.5em;
+}
+
+.hero_social li {
+  margin-right: 0.5rem;
+}
+
+.hero_about {
+  padding-left: 1em;
+  padding-right: 1em;
+  min-width: 30rem;
+  max-width: 60rem;
+}
+
+/*#about Stylings*/
+/*
+
+section#about {
+  padding-top: 50px;
+  color: black;
+}
+
+.about_title {
+  padding-bottom: 50px;
+}
+
+*/
+
+/*#paidWork Stylings*/
+/* PLAN
+ * - the area. what I did. layouts, find conceits. macro layouts for overall story. find where puzzles made most sense.  
+ * - parallel layout item. 
+ * - parallel blockout item.
+ * - playthrough video.
+ *
+ * 
+ * */
+
+section#paidwork {
+  padding-top: 50px;
+  color: black;
+}
+
+.paidwork_title {
+  padding-bottom: 50px;
+}
+
+.paidwork_content {}
+
+/*#resume Stylings*/
+
+
+/* REFERENCE
+ * color type: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value
+ * 
+ */

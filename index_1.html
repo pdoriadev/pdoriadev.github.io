@@ -10,7 +10,7 @@
     <!-- Prevents mobile browsers from rendering pages wider than the viewport and then shrinking them down. -->
     <meta name="viewport" content="width=device-width", initial-scale=1.0" />
     <link href="styles.css" rel="stylesheet" />
-    <title>Peter Doria - Game Designer, Programmer</title>
+    <title>Peter Doria - Game Designer, Engineer</title>
 </head>
 <body>
 	<header class="site_header">
@@ -18,10 +18,12 @@
 			<!-- NavBar - Jump to sections. Uses flex classes. --!>
 			<nav class="site_header_nav">
 				<ul role="list" class="flex flex_center">
-					<li><a heref="#0">HOME</a></li>
-					<li><a heref="#about">ABOUT</a></li>
-					<li><a heref="#work">HOME</a></li>
-					<li><a heref="#contact">CONTACT</a></li>
+					<li><a href="#0">HOME</a></li>
+					<li><a href="#about">ABOUT</a></li>
+					<li><a href="#paidwork">PAID WORK</a></li>
+					<li><a href="#resume">Resume</a></li>
+					<!--<li><a href="#projects">PROJECTS</a></li>  -->
+					<li><a href="#contact">CONTACT</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -30,48 +32,53 @@
 		<section id="hero">
 			<div class="wrapper">
 				<div class="wrapper_inner">
-					<div class="text_center hero_content">
-						<h1 class="h2">Peter Doria</h1>
-						<p class="h5">enum Roles my_roles[2] = { Roles::GAME_DESIGNER, Roles::GAME_DEVELOPER };</p>
+					<div class="hero_container">
+					  <div class="hero_figure">
+						<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/figure -->		
+						  <figure class="hero_figure">
+							  <img src="selfPhoto.jfif" alt="-- Profile Photo --" class="hero_figure" />
+							  <figcaption class="about_caption"></figcaption>
+						  </figure>
+					  </div>
+					  <div class="hero_content">
+						  <div class="">
+							  <h1 class="h3">Peter Doria</h1>
+						  </div>
+						  <div class="">
+							<p class="h0">Game Developer</p>
+							<!-- <address></address> -->
+							<ul role="list" class="hero_social">
+								<li><a href="https://www.linkedin.com/in/peterdoria/">LINKED-IN</a></li>
+								<li>
+	<!--			   _bl  ank target opens a new tab or window, depending on the browser. --!>
+									<a href="https://github.com/pdoriadev" target="_blank">GITHUB
+									<!-- <img src=""/ alt="GITHUB" width="96" height="48"> -->
+									</a>
+								</li>
+							</ul>
+						  </div>
+					  </div>
+					  <div class="hero_about">
+						  <p> Games are art. Games are business. I make art to make money to make art. I do not like forever games. I do not like poorly designed incremental games that pull players along a treadmill of hollow extrinsic rewards. I like puzzle games, well-written RPGs, some shooter puzzles, co-operative games. It better have a strong narrative premise, some level of puzzle, and / or be fun with friends. Actually fun with friends. I like games that are about something. Games that feel like they were made by a team, not by a machine. 
+						  </p>
+					  </div>
 					</div>
 				</div>
 			</div>
-			<ul role="list" class="flex flex_between hero_social">
-				<address>Southern California, USA</address>
-				<ul role="list" class="flex">
-					<li>Find me online</li>
-					<li>
-	<!-- _blank target opens a new tab or window, depending on the browser. --!>
-						<a href="https://github.com/pdoriadev" target="_blank">
-							<img src="PETER.png"/ alt="GitHub" width="24" height="24">
-						</a>
-					</li>
-				</ul>
-			<ul>
 		</section>
 	</main>
 	<section id="about">
 		<div class="wrapper">
-			<div class="text_center">
+			<!-- <div class="about_title text_center">
 				<h2>
-					I am who I am.
+					Hands-on Game Designer
 				</h2>
-			</div>
+			</div> -->
 			<div class="wrapper_inner">
-				<div class="about_content flex flex_around">
-					<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/figure -->		
-					<figure class="about_figure text_center">
-						<img width="200px" height="200px" src="" alt="Developer" class="about_img" />
-						<figcaption class="about_capution"> Peter </figcaption>
-					</figure>
-					<p class="h5">
-						Designing games. Building systems.
-					</p>
-				</div>
 			</div>
 		</div>
-	</section>		
-
+	</section>
+	
     <!-- Top Page Paragraph -->
 	<!--
     <img src="LeavesFromTheVine.jpg" alt="Test Image" >
@@ -85,6 +92,7 @@
 		!--> 
 		<!-- END Top of Page Paragraph -->
     <!-- Sklls Section -->
+<!--
     <p>Skills</p>
     <ul>
         <li>Unity</li>
@@ -97,11 +105,16 @@
             <li>Third Person Action/Adventure/Plaformer</li>
 	        <li>Puzzle</li>
 	        <li>Stealth</li>
-	    </ul>
-    </ul>
+	    </ul> </ul> -->
     <!-- END Skills Section -->
+<!--
+    <p>Skills</p>
     <a href="https://youtu.be/dQw4w9WgXcQ?si=P0PEYGNmaPeCmcWk">
         <h2>For Maisen<h2>
-	</a>
+	</a> 
+	-->
 </body>
 </html>
+<!-- TODO
+- different formatting for desktop vs. mobile. Probably needs javascript. Think that's how Luke did it.
+- insert pages / slideshows for each example.
