@@ -168,6 +168,7 @@ h5,
   justify-content: space-between;
 }
 
+/*Does this conflict with the above ???*/
 @media screen and (max-width: 468px) {
   .flex_around {
     justify-content: center;
@@ -226,6 +227,8 @@ h5,
   }
 }
 
+/****************** End of Media Screen Size Settings **********************************************/
+
 .text_center {
   text-align: center;
 }
@@ -252,10 +255,10 @@ h5,
 .wrapper_inner {
   width: 100%;
   max-width: auto;
-  margin: 0 auto;
+  margin: 0 auto; /*Top and bottom margins are 0. Right/left margins are auto-set by the browser.*/
 }
 
-/*#header STYLING*/
+/*#header STYLING************************************************************/
 
 /* Adds padding and a dark gradient to background.*/
 .site_header {
@@ -269,7 +272,7 @@ h5,
   color: #fff;
 }
 
-/*#hero STYLING*/
+/*#hero STYLING****************************************************************/
 
 /*gradient background*/
 section#hero {
@@ -287,6 +290,7 @@ section#hero {
   padding: var(--space-xs) var(--space-xs); 
 }
 
+/*First class after wrapper classes*/
 .hero_container { 
   display: inline-flex;
   align-items: center;
@@ -350,7 +354,10 @@ section#paidwork {
   padding-bottom: 50px;
 }
 
-.paidwork_content {}
+.paidwork_content {
+
+}
+
 
 /*#resume Stylings*/
 
