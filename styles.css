@@ -343,6 +343,7 @@ section#hero {
  * - playthrough video.
  *
  * 
+ * 
  * */
 
 section#paidwork {
@@ -360,6 +361,16 @@ section#paidwork {
 
 
 /*#resume Stylings*/
+section#resume {
+	margin: 0 auto;
+}
+
+.resume_frame iframe {
+	display: flex;	
+	padding: 100 auto; /* trying to add space above the iframe, but doesn't seem to work :\ */
+	margin: 0 auto;
+
+}
 
 
 /* REFERENCE
